@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   Alert,
-  KeyBoardAvoidinfView,
+  KeyBoardAvoidinView,
   Platform,
   ActivityIndicator,
   ScrollView,
@@ -61,7 +61,7 @@ export default function LoginScreen() {
   };
 
   return (
-    <KeyBoardAvoidinfView
+    <KeyBoardAvoidinView
       style={styles.container}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
@@ -134,6 +134,72 @@ export default function LoginScreen() {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </KeyBoardAvoidinfView>
+    </KeyBoardAvoidinView>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#f0f0f0",
+  },
+  scrollContainer: {
+    flexGrow: 1,
+  },
+  container: {
+    flex: 1,
+    justifyContent: "center", 
+  },
+  emoji: {
+    fontSize: 60,
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: 8,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: "#666",
+    marginBottom: 40,
+    textAlign: "center",
+  },
+  input: {
+    backgroundColor: "#fff",
+    borderRadius: 8,
+    padding: 15,
+    marginBottom: 15,
+    fontSize: 16,
+    borderWidth: 1,
+    borderColor: "#ddd",
+  },
+  button: {
+    backgroundColor: "#007bff",
+    borderRadius: 8,
+    padding: 15,
+    alignItems: "center",
+    marginTop: 10,
+    minHeight: 50,
+    justifyContent: "center",
+  },
+  buttonDisabled: {
+    opacity: 0.6,
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  backButton: {
+    marginTop: 20,
+    alignItems: "center",
+    padding: 10,
+  },
+  backText: {
+    color: "#007bff",
+    fontSize: 16,
+    fontWeight: "bold",
+  }
+})
